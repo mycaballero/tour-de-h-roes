@@ -1,13 +1,5 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { createStore } from 'Vuex';
+import store from './store'
 
-const store = createStore({
-  state: {
-      heroes: "hola heroes",
-  }
-  // other stuff
-})
-
-createApp(App).mount('#app')
-App.use(store);
+createApp(App).use(store).mount('#app')
